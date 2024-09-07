@@ -4,69 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Video Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .search-box {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        select {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        button:hover {
-            background-color: #218838;
-        }
-
-        .video-section {
-            display: none;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        video {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .no-video {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="video.css">
 </head>
 <body>
 
@@ -93,34 +31,7 @@
         </div>
     </div>
 
-    <script>
-        function searchVideo() {
-            const selectedProduct = document.getElementById("productDropdown").value;
-            const videoSection = document.getElementById("videoSection");
-            const productVideo = document.getElementById("productVideo");
-            const noVideo = document.getElementById("noVideo");
-
-            
-            const videos = {
-                "insurance": "video3.mp4",
-                "rice": "ag.mp4",
-                "msp": "video1.mp4",
-                "fertilizer": "video 2.mp4"
-            };
-
-            if (selectedProduct && videos[selectedProduct]) {
-                productVideo.src = videos[selectedProduct];
-                productVideo.style.display = "block";
-                noVideo.textContent = "";
-                videoSection.style.display = "block";
-            } else {
-                productVideo.src = "";
-                productVideo.style.display = "none";
-                noVideo.textContent = "No video found for the selected product.";
-                videoSection.style.display = "block";
-            }
-        }
-    </script>
+    <script src="video.js"></script>
 
 </body>
 </html>
